@@ -37,10 +37,21 @@ class FilePartAnalyzeTest {
 
 
     @Test
-    void getWordsContainingSubstring() {
+    void getWordsContainingSubstring() throws IOException {
+        FilePartAnalizer filePartAnalizer = new FilePartAnalizer();
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("kok");
+        expected.add("lok");
+        Assert.assertEquals(expected,filePartAnalizer.getWordsContainingSubstring("ok", 1, 20));
     }
-
-    @Test
-    void getStringsWhichPalindromes() {
-    }
+// todo write logic to this test
+//    @Test
+//    void getStringsWhichPalindromes() throws IOException {
+//        FilePartAnalizer filePartAnalizer = new FilePartAnalizer();
+//        ArrayList<String> expected = new ArrayList<>();
+//        expected.add("");
+//        expected.add("");
+//        Assert.assertEquals(expected,filePartAnalizer.getStringsWhichPalindromes(1, 20));
+//
+//    }
 }
