@@ -41,7 +41,6 @@ public class FilePartReader {
         ArrayList<String> linesFromFile = (ArrayList<String>) Stream.of(context.split("\n")).collect(Collectors.toList());
 
         setup(filePath, 1, 9);
-        System.out.println("asd");
 
         return linesFromFile;
 

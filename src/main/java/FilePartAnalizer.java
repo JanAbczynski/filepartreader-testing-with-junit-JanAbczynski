@@ -26,9 +26,9 @@ public class FilePartAnalizer {
 
         ArrayList< String > lines = filePartReader.readLine(filePath, fromLine, toLine);
         ArrayList< String > arrayList = new ArrayList<>();
-        for (int i = 0; i < lines.size(); i++ ){
-            if (lines.get(i).contains(subString)){
-                arrayList.add(lines.get(i));
+        for (String line : lines) {
+            if (line.contains(subString)) {
+                arrayList.add(line);
             }
         }
         return arrayList;
