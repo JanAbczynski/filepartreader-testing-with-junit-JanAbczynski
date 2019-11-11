@@ -40,7 +40,16 @@ public class FilePartAnalizer {
         ArrayList< String > polindromesList = new ArrayList<>();
         ArrayList< String > lines = filePartReader.readLine(filePath, fromLine, toLine);
 
-        // sprawdzic polindropmy
+        for (int i = 0; i < lines.size(); i++){
+            String toCheck = lines.get(i);
+            StringBuilder reverseString = new StringBuilder();
+            reverseString.append(toCheck);
+            reverseString = reverseString.reverse();
+            String reversedString = reverseString.toString();
+            if (toCheck.equals(reversedString)){
+                polindromesList.add(toCheck);
+            }
+        }
 
         return polindromesList;
     }

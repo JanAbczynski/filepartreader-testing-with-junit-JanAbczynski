@@ -30,7 +30,6 @@ public class FilePartReader {
 
     String read(String filePath) throws IOException {
         return new String(Files.readAllBytes(Paths.get(filePath)));
-
         }
 
 
